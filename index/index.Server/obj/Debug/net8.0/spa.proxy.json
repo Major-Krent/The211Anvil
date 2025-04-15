@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:5173",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "E:\\Anvil website\\index\\index.Server\\..\\index.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

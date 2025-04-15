@@ -1,0 +1,75 @@
+﻿html {
+    height: 100%;
+    /*font-size: 1px;*/
+}
+
+body {
+    height: 100%;
+}
+
+/* 全局页面样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 防止页面滚动 */
+    background-color: rgb(73, 65, 54); /* 设置页面的背景颜色 */
+}
+
+#canvas-container {
+    z-index: -1;
+}
+
+/* 调色板样式 */
+#marker-palette {
+    /*z-index: 10;*/
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    height: 800px; /* 固定高度 */
+    padding: 10px;
+    background-color: rgba(15, 15, 15, 0.8); /* 调色板背景 */
+    border: 1px solid rgba(15, 15, 15, 0.8); /* 边框 */
+    overflow-y: auto; /* 垂直滚动条 */
+    cursor: grab;
+}
+
+/* 自定义滚动条样式 */
+#marker-palette::-webkit-scrollbar {
+    width: 10px; /* 滚动条宽度 */
+}
+
+/* 滚动条滑块的轨道背景 */
+#marker-palette::-webkit-scrollbar-track {
+    background: rgba(50, 50, 50, 0.5); /* 设置滚动条轨道颜色 */
+}
+
+/* 滚动条滑块 */
+#marker-palette::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.8); /* 滑块颜色 */
+    border-radius: 5px; /* 圆角滑块 */
+}
+
+    /* 滑块在鼠标悬停时的颜色 */
+#marker-palette::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(150, 150, 150, 0.9); /* 鼠标悬停时的滑块颜色 */
+}
+
+/* 调色板内标志物样式 */
+.marker {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#color-palette {
+    position: fixed;
+    top: 870px;
+    left: 10px;
+    width: 90px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* 调色板背景 */
+    border: 1px solid rgba(255, 255, 255, 0.7); /* 边框 */
+}

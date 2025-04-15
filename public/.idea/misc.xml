@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/FZH/Programs/maven" />
+        <option name="userSettingsFile" value="C:\FZH\Programs\maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+</project>

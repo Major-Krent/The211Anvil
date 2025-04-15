@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interactive Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+  <script src="fabric.js"></script>
+  <script src="jscolor.js"></script>
+
+
+<!--  <div id="map" style="height: 100%; width: 100%"></div>-->
+
+  <div id="canvas-container">
+    <canvas id="canvas" width="2560" height="1440"/>
+  </div>
+
+<!--    <div id="map-container">-->
+<!--        <img id="game-map" src="images/Map.png" alt="Game Map">-->
+<!--    </div>-->
+
+  <div id="marker-palette">
+      <!-- Markers will be dynamically added via JavaScript -->
+  </div>
+  <input id="color-palette" value="#FF0000FF" data-jscolor="{alpha:0.7}">
+
+  <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
+      import { getDatabase, ref, push, onChildAdded } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
+
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+          apiKey: "AIzaSyC0k1q2F-VOVbWiD0ZgrgRmHlcPi2tr0Z4",
+          authDomain: "the211anvil.firebaseapp.com",
+          databaseURL: "https://the211anvil-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "the211anvil",
+          storageBucket: "the211anvil.appspot.com",
+          messagingSenderId: "667258931719",
+          appId: "1:667258931719:web:4aab0223499983ebb2b8a2",
+          measurementId: "G-0XRFX21QEX"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const database = getDatabase(app);
+
+      // Expose the database and other Firebase utilities globally
+      window.database = database;
+      // window.ref = ref;
+      // window.push = push;
+      // window.onChildAdded = onChildAdded;
+  </script>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
